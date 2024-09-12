@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Brief case bank</title>
+    <link rel="stylesheet" href="transfer.css">
+</head>
+<body>
+    <h1>Brief case bank</h1>
+    <form id="transfer-form">
+        <label for="fromAccountNumber">From Account Number:</label>
+        <input type="number" id="fromAccountNumber" name="fromAccountNumber" required>
+        <br><br>
+        <label for="toAccountNumber">To Account Number:</label>
+        <input type="number" id="toAccountNumber" name="toAccountNumber" required>
+        <br><br>
+        <label for="transferAmount">Transfer Amount:</label>
+        <input type="number" id="transferAmount" name="transferAmount" required>
+        <br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+        <button type="submit">Transfer Funds</button>
+        <button type="reset">Cancel</button>
+    </form>
+    <div id="transfer-status"></div>
+    <script src="script.js"></script>
+</body>
+</html>

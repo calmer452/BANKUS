@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BCB Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>BCB Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button id="login-btn">Login</button>
+            </form>
+            <div id="error-message"></div>
+            <button onclick="location.href='create-account.html'">Create Account</button>
+        </div>
+    </div>
+    <script type="module">
+        import { authenticate } from './auth.js';
+        const loginForm = document.getElementById('login-form');
+        const errorMessageDiv = document.getElementById('error-message');
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            console.log('Username:', username);
+            console.log('Password:', password);
+            if (authenticate(username, password)) {
+                console.log('Authentication successful!');
+                window.location.href = 'dashboard.html';
+            } else {
+                console.log('Invalid credentials!');
+                errorMessageDiv.innerHTML = 'Invalid username or password';
+            }
+        });
+    </script>
+</body>
+</html>
+

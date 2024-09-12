@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logout</title>
+    <link rel="stylesheet" href="logout.css">
+</head>
+<body>
+    <h1 class="logout-message">Logging out...</h1>
+    <p class="redirecting-message">You will be redirected to the login page in 2 seconds.</p>
+    <script>
+        // Logout functionality
+        window.onload = function() {
+            // Clear session data or cookies
+            sessionStorage.clear();
+            localStorage.clear();
+
+            // Redirect to login page after logout
+            setTimeout(function() {
+                window.location.href = 'login.html';
+            }, 2000); // Wait for 2 seconds before redirecting
+        }
+    </script>
+</body>
+</html>

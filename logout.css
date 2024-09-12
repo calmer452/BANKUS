@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Add some style to the logout message */
+.logout-message {
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Style the redirecting message */
+.redirecting-message {
+    font-size: 18px;
+    color: #999;
+    margin-top: 20px;
+}
